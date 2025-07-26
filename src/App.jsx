@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import AllDestinations from "./pages/AllDestinations";
 import DestinationsDetails from "./pages/DestinationsDetails";
+import NotFound from "./pages/NotFound";
+import AddDestination from "./pages/AddDestination";
 
 function App() {
   return (
@@ -14,12 +16,14 @@ function App() {
       <section id="main-body">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="about" element={<AboutUs />} />
-          <Route path="all-Destinations" element={<AllDestinations />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/all-destinations" element={<AllDestinations />} />
           <Route
             path="/destination/:destinationId"
             element={<DestinationsDetails />}
           />
+          <Route path="/add-destination" element={<AddDestination />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </section>
       <Footer />

@@ -35,3 +35,8 @@ footer {
   padding: 5px;
   margin: 5px;
 }
+.cardLink {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
