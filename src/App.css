@@ -40,3 +40,86 @@ footer {
   color: black;
   font-size: 30px;
 }
+.home-page {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#section1 {
+  background-image: url(https://visitporto.travel/assets/img-porto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.main-Header {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+#section2 {
+  background-image: url(https://amiroad.pt/wp-content/uploads/2023/05/avenida-aliados-1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+#section2 {
+  font-size: 1rem;
+  line-height: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featured-header {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.featured-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 2rem auto 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.featured-p {
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+#section4 {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+#section4 h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+#section4 button {
+  background-color: #1d72e8;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+#section4 button:hover {
+  background-color: #1558b0;
+}
