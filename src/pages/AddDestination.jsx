@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 function AddDestination() {
   const [name, setName] = useState("");
-  const [type, setType] = useState("");
+  const [category, setcategory] = useState("");
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
+  const [image, setImage] = useState("");
   const [openOnWeekends, setOpenOnWeekends] = useState(false);
-  const [speciality, setSpeciality] = useState("");
   const [rating, setRating] = useState("");
   const nav = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
@@ -18,11 +18,11 @@ function AddDestination() {
     setIsLoading(true);
     const newDestination = {
       name,
-      type,
+      category,
       description,
       location,
+      image,
       openOnWeekends,
-      speciality,
       rating,
     };
     try {
@@ -32,11 +32,11 @@ function AddDestination() {
       );
       console.log("Destination added:", response.data);
       setName("");
-      setType("");
+      setcategory("");
       setDescription("");
       setLocation("");
+      setImage("");
       setOpenOnWeekends(false);
-      setSpeciality("");
       setRating("");
       nav("/all-destinations");
     } catch (error) {
@@ -48,10 +48,9 @@ function AddDestination() {
 
   const isFormValid =
     name.trim() !== "" &&
-    type.trim() !== "" &&
+    category.trim() !== "" &&
     description.trim() !== "" &&
     location.trim() !== "" &&
-    speciality.trim() !== "" &&
     rating.trim() !== "";
 
   return (
@@ -68,13 +67,20 @@ function AddDestination() {
         </label>
 
         <label>
-          Type:
-          <input
-            name="type"
-            type="text"
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-          />
+          Category:
+          <select
+            name="category"
+            value={category}
+            onChange={(e) => setcategory(e.target.value)}
+          >
+            <option value="" disabled>
+              --Select Category--
+            </option>
+            <option value="landmark">Landmark</option>
+            <option value="nature">Nature</option>
+            <option value="shopping">Shopping</option>
+            <option value="sports">Sports</option>
+          </select>
         </label>
 
         <label>
@@ -96,7 +102,17 @@ function AddDestination() {
             onChange={(e) => setLocation(e.target.value)}
           />
         </label>
-
+        <label>
+          Image
+          <input
+            name="image"
+            type="text"
+            value={image}
+            onChange={(e) => {
+              setImage(e.target.value);
+            }}
+          />
+        </label>
         <label>
           Open on weekends
           <input
@@ -104,16 +120,6 @@ function AddDestination() {
             type="checkbox"
             checked={openOnWeekends}
             onChange={(e) => setOpenOnWeekends(e.target.checked)}
-          />
-        </label>
-
-        <label>
-          Speciality:
-          <input
-            name="speciality"
-            type="text"
-            value={speciality}
-            onChange={(e) => setSpeciality(e.target.value)}
           />
         </label>
         <label>

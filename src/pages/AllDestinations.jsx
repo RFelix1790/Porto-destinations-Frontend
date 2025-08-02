@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MySpinner from "../components/MySpinner";
+import SearchBar from "../components/SearchBar";
 
 function AllDestinations() {
   const [destinations, setdestinations] = useState([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
     async function getAllDestinations() {
       try {
@@ -15,6 +18,9 @@ function AllDestinations() {
     }
     getAllDestinations();
   }, []);
+  if (destinations.length === 0) {
+    return <MySpinner />;
+  }
 
   async function handleDelete(destinationId) {
     try {
@@ -30,26 +36,43 @@ function AllDestinations() {
       console.log(error);
     }
   }
+  function filterDestination(e) {
+    setSearch(e.target.value);
+  }
   return (
-    <div>
-      <h1>All destinations</h1>
-      {destinations.map((eachDestination) => {
-        return (
-          <div key={eachDestination.id}>
-            <Link
-              to={`/destination/${eachDestination.id}`}
-              className="cardLink"
-            >
-              <div className="card">
-                <h1>{eachDestination.name}</h1>
-              </div>
-            </Link>
-            <button onClick={() => handleDelete(eachDestination.id)}>
-              Delete
-            </button>
-          </div>
-        );
-      })}
+    <div className="allDestinations-container">
+      <SearchBar
+        search={search}
+        setSearch={setSearch}
+        filterDestination={filterDestination}
+      />
+      <h1 className="title">All destinations</h1>
+      {destinations
+        .filter((oneDestination) => {
+          if (
+            oneDestination.name.toLowerCase().includes(search.toLowerCase())
+          ) {
+            return true;
+          }
+        })
+        .map((eachDestination) => {
+          return (
+            <div key={eachDestination.id}>
+              <Link
+                to={`/destination/${eachDestination.id}`}
+                className="cardLink"
+              >
+                <div className="card">
+                  <img src={eachDestination.img} alt={eachDestination.name} />
+                  <h1>{eachDestination.name}</h1>
+                </div>
+              </Link>
+              <button onClick={() => handleDelete(eachDestination.id)}>
+                Delete
+              </button>
+            </div>
+          );
+        })}
     </div>
   );
 }

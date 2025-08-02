@@ -59,13 +59,17 @@ function DestinationsDetails() {
           </label>
 
           <label>
-            Type:
-            <input
-              name="type"
-              type="text"
-              value={updatedDestination.type}
+            Category:
+            <select
+              name="category"
+              value={updatedDestination.category}
               onChange={handleChanges}
-            />
+            >
+              <option value="landmark">Landmark</option>
+              <option value="nature">Nature</option>
+              <option value="shopping">Shopping</option>
+              <option value="sports">Sports</option>
+            </select>
           </label>
 
           <label>
@@ -87,6 +91,15 @@ function DestinationsDetails() {
               onChange={handleChanges}
             />
           </label>
+          <label>
+            Image
+            <input
+              name="image"
+              type="text"
+              value={updatedDestination.image}
+              onChange={handleChanges}
+            />
+          </label>
 
           <label>
             Open on weekends
@@ -94,16 +107,6 @@ function DestinationsDetails() {
               name="openOnWeekends"
               type="checkbox"
               checked={updatedDestination.openOnWeekends}
-              onChange={handleChanges}
-            />
-          </label>
-
-          <label>
-            Speciality:
-            <input
-              name="speciality"
-              type="text"
-              value={updatedDestination.speciality}
               onChange={handleChanges}
             />
           </label>
@@ -125,10 +128,16 @@ function DestinationsDetails() {
         <div>
           {destination ? (
             <>
-              <h2>{destination.name}</h2> <p>{destination.description}</p>
+              <h2>{destination.name}</h2>
+              <img src={destination.image} alt={destination.name} />
+              <p>{destination.description}</p>
+              <p>Location:{destination.location}</p>
+              <p>Category:{destination.category}</p>
+              <p>Rating:{destination.rating}</p>
+              <p>OpenOnWeekends:{destination.openOnWeekends ? "yes" : "no"}</p>
             </>
           ) : (
-            <p>Loanding</p>
+            <p>Loading</p>
           )}
           <Link to="/all-Destinations">Back</Link>
         </div>
