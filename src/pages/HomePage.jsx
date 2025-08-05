@@ -8,26 +8,29 @@ function HomePage() {
         <p>Search Destination</p>
       </section>
       <section id="section2">
-        <h2 className="header2nd">Porto</h2>
-        <p>
-          Porto is Portugal’s second-largest city, perched along the steep banks
-          of the Douro River. Renowned for its colorful Ribeira district and the
-          iconic Dom Luís I Bridge, it blends medieval charm with a vibrant
-          cultural scene. Porto is the birthplace of port wine, whose cellars
-          line the river’s opposite shore, and its UNESCO-listed historic center
-          offers narrow cobbled streets, baroque churches, and lively cafés.
-          With a backdrop of terracotta rooftops and the Atlantic mist on the
-          horizon, Porto captures the romance of old-world Europe in every
-          sunset-lit vista.
-        </p>
+        <div className="section2-image"></div>
+        <div className="section2-text">
+          <h2 className="header2nd">Porto</h2>
+          <p>
+            Porto is Portugal’s second-largest city, perched along the steep
+            banks of the Douro River. Renowned for its colorful Ribeira district
+            and the iconic Dom Luís I Bridge, it blends medieval charm with a
+            vibrant cultural scene. Porto is the birthplace of port wine, whose
+            cellars line the river’s opposite shore, and its UNESCO-listed
+            historic center offers narrow cobbled streets, baroque churches, and
+            lively cafés. With a backdrop of terracotta rooftops and the
+            Atlantic mist on the horizon, Porto captures the romance of
+            old-world Europe in every sunset-lit vista.
+          </p>
+        </div>
       </section>
       <section id="section3">
-        <h2 className="features-header">Featured Destinations</h2>
+        <h2 className="section3-mainHeader">Featured Destinations</h2>
         <div id="card-container">
           <div className="card">
             <Link to="/destination/1">
               <img
-                src="https://euroveloportugal.com/files/2016/01/torre-dos-clerigos.jpg"
+                src="https://porto.travel/wp-content/uploads/sites/17/2018/03/ribeira-oporto-1-scaled.jpeg"
                 alt="Torre dos clerigos"
                 className="featured-img"
               />
@@ -61,6 +64,24 @@ function HomePage() {
               perfect escape from the city's hustle. With picturesque
               lighthouses, sandy beaches, and stunning sunsets, Foz offers a
               refined and relaxing side of Porto. Perguntar ao ChatGPT
+            </p>
+          </div>
+          <div className="card">
+            <Link to="/destination/11">
+              <img
+                src="https://cdn.visitportugal.com/sites/default/files/styles/encontre_detalhe_poi_destaque/public/mediateca/N4.OTR1540D.jpg?itok=Zl2GULoZ"
+                alt="Casa da Música"
+                className="featured-img"
+              />
+            </Link>
+            <h2 className="featured-header">Casa da Música</h2>
+            <p className="featured-p">
+              Casa da Música is Porto’s iconic modern concert hall, designed by
+              architect Rem Koolhaas. With its bold geometric design and
+              world-class acoustics, it hosts an eclectic mix of performances,
+              from classical orchestras to contemporary bands. Its striking
+              architecture has become a symbol of Porto’s vibrant cultural
+              scene.
             </p>
           </div>
           <div className="card">
@@ -105,12 +126,16 @@ function HomePage() {
       </section>
 
       <section id="section4">
-        <h3>
-          Know a hidden gem? <br /> Add your destination!
-        </h3>
-        <Link to="/add-destination">
-          <button>Add you destination</button>
-        </Link>
+        <div className="section4-text">
+          <h3>
+            Know a hidden gem? <br /> Add your destination!
+          </h3>
+
+          <Link to="/add-destination">
+            <button>Add you destination</button>
+          </Link>
+        </div>
+        <div className="section4-image"></div>
       </section>
     </div>
   );

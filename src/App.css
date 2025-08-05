@@ -56,25 +56,43 @@ footer {
   align-items: center;
   color: white;
   text-align: center;
+  margin: 20px 0 20px 0;
 }
 .main-Header {
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 50px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 #section2 {
+  display: flex;
+  align-items: center;
+  margin: 80px 0 80px 0;
+  height: 50vh;
+}
+.section2-image {
+  flex: 1;
+  height: 100%;
   background-image: url(https://amiroad.pt/wp-content/uploads/2023/05/avenida-aliados-1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
 }
-#section2 {
-  font-size: 1rem;
+.section2-text {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section2-text h2 {
+  font-size: 15vh;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.section2-text p {
+  font-size: 20px;
   line-height: 2;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 #section3 {
   padding: 2rem 1rem;
@@ -82,11 +100,14 @@ footer {
 #section3 h2 {
   display: flex;
   justify-content: center;
-  font-size: 50px;
+}
+.section3-mainHeader {
+  font-size: 100px;
+  margin-bottom: 80px;
 }
 #card-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2;
   margin: 0 auto;
 }
@@ -94,14 +115,16 @@ footer {
   border: 1px solid #1d72e8;
   border-radius: 12px;
   padding: 1rem;
-  width: 260px;
+  width: 300px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
   background-color: #f5f5f5;
 }
 
 .featured-header {
-  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
   margin-bottom: 2rem;
 }
 .featured-img {
@@ -116,55 +139,39 @@ footer {
   line-height: 1.5;
 }
 #section4 {
-  background-color: #f5f5f5;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 3rem 1rem;
-  margin-top: 3rem;
-  border-top: 1px solid #ddd;
+  margin: 80px;
+  border-top: 3px solid black;
 }
-#section4 h3 {
-  font-size: 2rem;
+.section4-text {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.section4-text h3 {
+  font-size: 60px;
   margin-bottom: 2rem;
 }
-#section4 button {
+.section4-text button {
   background-color: #1d72e8;
   color: white;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 60px;
   border: none;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
-#section4 button:hover {
-  background-color: #1558b0;
-}
-.allDestinations-container {
-  padding: 2rem;
-  margin: auto;
-}
-.title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #222;
-}
-.cardLink {
-  text-decoration: none;
-  color: inherit;
-}
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-.card h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin: 1rem;
-}
-button {
-  background-color: aqua;
-  color: white;
-  border: none;
-  font-weight: bold;
+.section4-image {
+  flex: 1;
+  height: 500px;
+  background-image: url(https://www.portugal.com/wp-content/uploads/2024/07/29129307927_43e49f8958_c-696x353.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 300px;
 }
