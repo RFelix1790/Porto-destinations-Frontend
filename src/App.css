@@ -1,13 +1,14 @@
 body {
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 nav {
-  background-color: aqua;
+  background-color: lightblue;
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 nav img {
   height: 90%;
@@ -21,10 +22,6 @@ nav a {
   text-decoration: none;
   color: black;
   font-size: 30px;
-}
-footer {
-  background-color: aqua;
-  height: 10vh;
 }
 #main-body {
   min-height: 80vh;
@@ -112,7 +109,7 @@ footer {
   margin: 0 auto;
 }
 .card {
-  border: 1px solid #1d72e8;
+  border: 5px solid lightblue;
   border-radius: 12px;
   padding: 1rem;
   width: 300px;
@@ -159,7 +156,7 @@ footer {
   margin-bottom: 2rem;
 }
 .section4-text button {
-  background-color: #1d72e8;
+  background-color: lightblue;
   color: white;
   padding: 1rem 2rem;
   font-size: 60px;
@@ -174,4 +171,90 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 300px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  font-size: 30px;
+  font-weight: 500;
+  background-color: lightblue;
+  height: 10vh;
+}
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+.allDestinations-container {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+.title {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 80px;
+  color: rgb(44, 37, 37);
+}
+.destination-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+.all-destinations-card {
+  border: 5px solid lightblue;
+  border-radius: 12px;
+  padding: 10px;
+  width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.all-destinations-cardLink {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.all-destinations-card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.all-destinations-card h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: rgb(44, 37, 37);
+}
+.all-destinations-card button {
+  background-color: lightblue;
+  color: white;
+  border: none;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  font-size: 30px;
+  width: 130px;
+}
+.card-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.search-bar {
+  width: 800px;
+  text-align: center;
+  height: 80px;
+  padding: 30px;
+  font-size: 40px;
+  border: 5px solid lightblue;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }

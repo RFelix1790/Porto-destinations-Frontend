@@ -12,7 +12,7 @@ function DestinationsDetails() {
     async function getDestination() {
       try {
         const response = await axios.get(
-          `http://localhost:5005/destinations/${destinationId}`
+          `${import.meta.env.VITE_JSONSERVER}/destinations/${destinationId}`
         );
         setDestination(response.data);
         setUpdatedDestination(response.data);
@@ -34,7 +34,7 @@ function DestinationsDetails() {
     e.preventDefault();
     try {
       const rep = await axios.put(
-        `http://localhost:5005/destinations/${destinationId}`,
+        `${import.meta.env.VITE_JSONSERVER}/destinations/${destinationId}`,
         updatedDestination
       );
       setDestination(rep.data);

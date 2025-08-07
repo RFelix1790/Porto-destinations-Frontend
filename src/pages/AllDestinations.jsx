@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MySpinner from "../components/MySpinner";
 import SearchBar from "../components/SearchBar";
+import { Button } from "bootstrap";
 
 function AllDestinations() {
   const [destinations, setdestinations] = useState([]);
@@ -10,7 +11,9 @@ function AllDestinations() {
   useEffect(() => {
     async function getAllDestinations() {
       try {
-        const response = await axios.get("http://localhost:5005/destinations");
+        const response = await axios.get(
+          `${import.meta.env.VITE_JSONSERVER}/destinations`
+        );
         setdestinations(response.data.reverse());
       } catch (error) {
         console.log(error);
@@ -25,7 +28,7 @@ function AllDestinations() {
   async function handleDelete(destinationId) {
     try {
       const response = await axios.delete(
-        `http://localhost:5005/destinations/${destinationId}`
+        `${import.meta.env.VITE_JSONSERVER}/destinations/${destinationId}`
       );
       console.log(response.data);
       const newDestinationArray = destinations.filter(
@@ -41,38 +44,49 @@ function AllDestinations() {
   }
   return (
     <div className="allDestinations-container">
+      <h1 className="title">All destinations</h1>
       <SearchBar
         search={search}
         setSearch={setSearch}
         filterDestination={filterDestination}
       />
-      <h1 className="title">All destinations</h1>
-      {destinations
-        .filter((oneDestination) => {
-          if (
-            oneDestination.name.toLowerCase().includes(search.toLowerCase())
-          ) {
-            return true;
-          }
-        })
-        .map((eachDestination) => {
-          return (
-            <div key={eachDestination.id}>
-              <Link
-                to={`/destination/${eachDestination.id}`}
-                className="cardLink"
-              >
-                <div className="card">
-                  <img src={eachDestination.img} alt={eachDestination.name} />
+      <div className="destination-grid">
+        {destinations
+          .filter((oneDestination) => {
+            if (
+              oneDestination.name.toLowerCase().includes(search.toLowerCase())
+            ) {
+              return true;
+            }
+          })
+          .map((eachDestination) => {
+            return (
+              <div key={eachDestination.id} className="all-destinations-card">
+                <Link
+                  to={`/destination/${eachDestination.id}`}
+                  className="all-destinations-cardLink"
+                >
+                  <img src={eachDestination.image} alt={eachDestination.name} />
                   <h1>{eachDestination.name}</h1>
+                </Link>
+                <div className="card-button-group">
+                  <button
+                    onClick={() => handleDelete(eachDestination.id)}
+                    className="card-button"
+                  >
+                    Delete
+                  </button>
+                  <Link
+                    to={`/destination/${eachDestination.id}`}
+                    className="card-button"
+                  >
+                    <button>Info</button>
+                  </Link>
                 </div>
-              </Link>
-              <button onClick={() => handleDelete(eachDestination.id)}>
-                Delete
-              </button>
-            </div>
-          );
-        })}
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }

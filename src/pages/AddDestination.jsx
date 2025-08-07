@@ -27,7 +27,7 @@ function AddDestination() {
     };
     try {
       const response = await axios.post(
-        "http://localhost:5005/destinations",
+        "${import.meta.env.VITE_JSONSERVER}/destinations",
         newDestination
       );
       console.log("Destination added:", response.data);

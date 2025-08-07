@@ -31,7 +31,7 @@ function HomePage() {
             <Link to="/destination/1">
               <img
                 src="https://porto.travel/wp-content/uploads/sites/17/2018/03/ribeira-oporto-1-scaled.jpeg"
-                alt="Torre dos clerigos"
+                alt="Ribeira"
                 className="featured-img"
               />
             </Link>

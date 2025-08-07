@@ -1,11 +1,14 @@
 function SearchBar({ search, filterDestination }) {
   return (
-    <input
-      type="text"
-      placeholder="search destination"
-      value={search}
-      onChange={filterDestination}
-    />
+    <div className="search-bar-container">
+      <input
+        type="text"
+        placeholder="search destination"
+        value={search}
+        onChange={filterDestination}
+        className="search-bar"
+      />
+    </div>
   );
 }
 
