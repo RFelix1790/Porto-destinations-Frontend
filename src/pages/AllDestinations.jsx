@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MySpinner from "../components/MySpinner";
 import SearchBar from "../components/SearchBar";
-import { Button } from "bootstrap";
 
 function AllDestinations() {
   const [destinations, setdestinations] = useState([]);
@@ -14,7 +13,7 @@ function AllDestinations() {
         const response = await axios.get(
           `${import.meta.env.VITE_JSONSERVER}/destinations`
         );
-        setdestinations(response.data.reverse());
+        setdestinations(response.data);
       } catch (error) {
         console.log(error);
       }

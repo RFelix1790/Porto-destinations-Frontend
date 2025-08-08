@@ -258,3 +258,121 @@ footer a {
   border-radius: 12px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
+.add-destination-container {
+  margin: 50px 50px;
+  padding: 30px;
+  border: 20px solid lightblue;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.add-destination-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.add-destination-container label,
+.add-destination-container select {
+  padding: 10px 14px;
+  font-size: 30px;
+}
+.add-destination-container label {
+  display: flex;
+  gap: 10px;
+}
+.add-destination-container button {
+  padding: 12px;
+  font-size: 30px;
+  color: white;
+  border: none;
+  background-color: lightblue;
+}
+.add-h2 {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.add-destination-container input {
+  width: 800px;
+}
+.destination-details {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.destination-details h2 {
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+.destination-details img {
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  display: block;
+  width: 100vh;
+  object-fit: cover;
+}
+.destination-details p {
+  text-align: center;
+  font-size: 30px;
+}
+
+.destination-details form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.destination-details label {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.destination-details input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+}
+.destination-details input[type="text"],
+.destination-details input[type="number"] {
+  width: 80vh;
+}
+.destination-details input,
+.destination-details select {
+  padding: 10px;
+  font-size: 20px;
+  border: 3px solid lightblue;
+  border-radius: 8px;
+}
+.btn-shared {
+  padding: 20px 20px;
+  font-size: 40px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 80vh;
+  text-decoration: none;
+  display: flex;
+}
+.btn-back {
+  background-color: lightblue;
+  color: black;
+  margin-top: 80px;
+  margin-left: 125px;
+}
+.btn-update {
+  background-color: rgb(32, 31, 31);
+  margin-bottom: 50px;
+  color: white;
+}
+.btn-confirm {
+  background-color: lightblue;
+  margin-left: 60px;
+}

@@ -45,7 +45,7 @@ function DestinationsDetails() {
   };
 
   return (
-    <div>
+    <div className="destination-details">
       {update ? (
         <form onSubmit={handleSubmit}>
           <label>
@@ -122,7 +122,9 @@ function DestinationsDetails() {
               onChange={handleChanges}
             />
           </label>
-          <button type="submit">Confirm</button>
+          <button type="submit" className="btn-shared btn-confirm">
+            Confirm
+          </button>
         </form>
       ) : (
         <div>
@@ -139,11 +141,16 @@ function DestinationsDetails() {
           ) : (
             <p>Loading</p>
           )}
-          <Link to="/all-Destinations">Back</Link>
+          <Link to="/all-Destinations" className="btn-shared btn-back">
+            Back
+          </Link>
         </div>
       )}
-      <button onClick={() => setupdate(!update)}>
-        {update ? "cancel" : "Update"}
+      <button
+        onClick={() => setupdate(!update)}
+        className="btn-shared btn-update"
+      >
+        {update ? "Cancel" : "Update"}
       </button>
     </div>
   );

@@ -132,7 +132,7 @@ function HomePage() {
           </h3>
 
           <Link to="/add-destination">
-            <button>Add you destination</button>
+            <button>Add your destination</button>
           </Link>
         </div>
         <div className="section4-image"></div>
