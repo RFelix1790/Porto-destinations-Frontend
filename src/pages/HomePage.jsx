@@ -5,7 +5,6 @@ function HomePage() {
     <div className="home-page">
       <section id="section1">
         <h1 className="main-Header">Discover the Undefeated City</h1>
-        <p>Search Destination</p>
       </section>
       <section id="section2">
         <div className="section2-image"></div>
