@@ -8,7 +8,6 @@ import AllDestinations from "./pages/AllDestinations";
 import DestinationsDetails from "./pages/DestinationsDetails";
 import NotFound from "./pages/NotFound";
 import AddDestination from "./pages/AddDestination";
-import ReadMe from "./pages/readMe";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
           />
           <Route path="/add-destination" element={<AddDestination />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/read-me" element={<ReadMe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>

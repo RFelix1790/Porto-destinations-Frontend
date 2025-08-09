@@ -376,3 +376,44 @@ footer a {
   background-color: lightblue;
   margin-left: 60px;
 }
+.about-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.about-container h2 {
+  margin-top: 30px;
+  color: #2c3e50;
+}
+
+.about-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-container li {
+  background: #ffffff;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+}
